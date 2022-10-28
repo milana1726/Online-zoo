@@ -1,0 +1,176 @@
+@font-face {
+    font-family: Roboto;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+
+:root {
+    --color-green: #4B9200;
+    --color-orange: #F9804B;
+    --color-orage-dark: #E47209;
+    --color-yellow: #FFEE2E;
+    --color-red: #D31414;
+    --color-black-blue: #333B41;
+    --color-grey: #767474;
+    --color-grey-smoky: #ABABAB;
+    --color-light-grey: #F1F3F2;
+    --color-fosted-glass-white: #FDFDFF;
+}
+
+html {
+    box-sizing: border-box;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+    font-family: Roboto;
+}
+
+body {
+    margin: auto;
+    max-width: 1600px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.desktop_wrapper {
+    background: url(../../assets/images/background_Giant-Panda.png);
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 220px 0 220px;
+}
+
+/* -----HEADER----- */
+header {
+    margin: 0;
+    padding: 0;
+    display: flex;
+	flex-direction: row;
+    background-color: #000;
+    max-height: 80px;
+}
+
+.header_logo {
+    position: relative;
+    padding: 0;
+    align-items: center;
+}
+
+.bamboo_icon {
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -2px;
+}
+
+h1 {
+    position: absolute;
+    margin: 14px 0px 14px 0px;
+    padding: 3px 4px 1px 4px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 19.01px;
+    line-height: 22.82px;
+    border: 1px solid #fff;
+}
+
+h1:hover {
+    color: var(--color-green);
+    transition-duration: 1.5s;
+    border: 1px solid var(--color-green);
+}
+
+.nav_menu {
+    display: flex;
+	flex-direction: row;
+    align-items: flex-start;
+    margin-left: 88px;
+    overflow-y: hidden;
+}
+
+.nav_item {
+    margin: 29px 0px 29px 58px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+.item_active {
+    color: var(--color-orange);
+}
+
+.nav_item:hover {
+    color: var(--color-green);
+    transition-duration: 1.5s;
+}
+
+.designed_by {
+    margin-left: 436px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22.4px;
+}
+
+/* -----WATCH ONLINE----- */
+.circle_block {
+    position: relative;
+    width: 465px;
+    height: 465px;
+    margin-top: 12px;
+    margin-left: 587px;
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    align-items: center;
+}
+
+.circle_block h2 {
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 73px;
+    width: 500px;
+    height: 400px;
+    font-weight: 700;
+    font-size: 106.5px;
+    line-height: 75%;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.circle_block h2 span {
+    font-weight: 700;
+    font-size: 106.5px;
+    line-height: 75%;
+    color: var(--color-yellow);
+    text-transform: uppercase;
+}
+
+.button_watch {
+    width: 298px;
+	height: 54px;
+    margin-top: 69px;
+    margin-left: calc(50% - 298px/2 + 332px);
+    margin-bottom: 100px;
+	border: none;
+    background: var(--color-orange);
+	border-radius: 25px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+	cursor: pointer;
+}
+
+.button_watch:hover {
+    background: var(--color-orage-dark);
+    transition-duration: 1.5s;
+}
