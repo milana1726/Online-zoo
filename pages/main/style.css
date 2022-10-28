@@ -1,6 +1,7 @@
 @font-face {
     font-family: Roboto;
     src: url(/assets/fonts/Roboto-Regular.ttf);
+    font-style: normal;
 }
 
 :root {
@@ -63,8 +64,10 @@ header {
 
 .bamboo_icon {
     position: absolute;
-    margin-left: -6px;
+    margin-left: -5px;
     margin-top: -2px;
+    width: 12px;
+    height: 21px;
 }
 
 h1 {
@@ -174,3 +177,71 @@ h1:hover {
     background: var(--color-orage-dark);
     transition-duration: 1.5s;
 }
+
+/* -----BACKSTAGE----- */
+.backstage_block {
+    position: relative;
+    background-color: #fff;
+    padding-top: 140px;
+    padding-bottom: 180px;
+    align-items: center;
+}
+
+.backstage_block .wrapper {
+    position: absolute;
+}
+
+.backstage_deco {
+    margin-top: -128px;
+    margin-left: 1396px;
+    width: 293px;
+    height: 605px;
+}
+
+.backstage_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.backstage_image {
+    width: 609px;
+    height: 403px;
+    margin-right: 86px;
+    margin-left: -1px;;
+    display: block;
+}
+
+.backstage_textblock h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #545454;
+}
+
+.backstage_textblock h3 {
+    margin-top: 55px;
+    margin-bottom: 33px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--color-black-blue);
+}
+
+.backstage_text1 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-black-blue);
+}
+.backstage_text2{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-black-blue);
+}
+
