@@ -1,8 +1,3 @@
-
-/* * {
-
-} */
-
 @font-face {
     font-family: Roboto;
     src: url(/assets/fonts/Roboto-Regular.ttf);
@@ -12,6 +7,7 @@
 :root {
     --color-green: #4B9200;
     --color-orange: #F9804B;
+    --color-orange-light: #FE9013;
     --color-orage-dark: #E47209;
     --color-orange-gradient: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     --color-yellow: #FFEE2E;
@@ -33,7 +29,6 @@ html {
 body {
     position: relative;
     margin: auto;
-    /* miwidth: 1600px; */
     background-color: #000;
 }
 
@@ -177,10 +172,9 @@ h1:hover {
     background: var(--color-orange-gradient);
 	border-radius: 25px;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 140%;
 	color: #fff;
-    text-align: center;
     text-transform: uppercase;
 	cursor: pointer;
 }
@@ -191,7 +185,6 @@ h1:hover {
 }
 
 /* -----BACKSTAGE----- */
-
 .backstage_block {
     position: relative;
     background-color: #fff;
@@ -278,7 +271,7 @@ h1:hover {
 
 .cards_container {
     display: grid;
-    column-gap: 29px;
+    column-gap: 28px;
     row-gap: 18px;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -335,12 +328,13 @@ h1:hover {
 }
 
 .pet_info_text {
-    margin: 8px 0px 16px 16px;
+    margin: 7px 0px 16px 16px;
     width: 294px;
 }
 
 .pet_info_text h4 {
     margin: 0;
+    margin-bottom: -4px;
     font-weight: 600;
     font-size: 16px;
     line-height: 140%;
@@ -368,7 +362,7 @@ h1:hover {
 }
 
 .button_choose {
-    margin-top: 79px;
+    margin-top: 78px;
     width: 298px;
     height: 54px;
     border: none;
@@ -377,7 +371,6 @@ h1:hover {
     font-weight: 500;
     font-size: 14.5px;
     line-height: 140%;
-    text-align: center;
     text-transform: uppercase;
     color: #fff;
     cursor: pointer;
@@ -411,3 +404,152 @@ h1:hover {
 }
 
 /* -----PICK AND FEED----- */
+.pick_feed_block {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    background-image: url(../../assets/images/background_pick-and-feed.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pick_feed_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(253, 253, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+}
+
+.pick_feed_textblock  {
+    margin-left: 42px;
+    margin-bottom: 11px;
+    text-align: left;
+    color: var(--color-black-blue);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.pick_feed_textblock h2 {
+    margin: 40px auto 31px 251px;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: left;
+    color: var(--color-orange-light);
+}
+
+.pick_feed_textblock .subtitle {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 40px;
+}
+
+.pick_feed_textblock .text_bold {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: -5px;
+    letter-spacing: 0.0045em;
+}
+
+.pick_feed_textblock .support_link {
+    position: relative;
+    color: #333B41;
+    text-decoration: none;
+}
+
+.support_link::after {
+    content: "";
+    position: absolute;
+    width: 178px;
+    left: 0;
+    top: 21.5px;
+    border-bottom: 1px solid var(--color-orange-light);
+}
+
+.pick_feed_work_block h3{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    margin-left: 477px;
+    margin-bottom: 35px;
+    color: var(--color-black-blue);
+}
+
+.work_table {
+    padding-left: 199px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.table_item {
+    width: 168px;
+    height: 244px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table_image {
+    width: 168px;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid var(--color-orage-dark);
+}
+
+.pay_image {
+    padding-top: 54px;
+    width: 108px;
+    height: 60px;
+}
+
+.zoo_image {
+    padding-top: 38px;
+    width: 85.77px;
+    height: 95px;
+}
+
+.monkey_image {
+    padding-top: 48px;
+    width: 124.75px;
+    height: 71.6px;
+}
+
+.arrow_big {
+    padding: 0 31px 85px 30px;
+    width: 69px;
+    height: 35.08px;
+}
+
+.table_item p {
+    margin: 0;
+    padding-top: 29px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.button_feed {
+    margin: 62px 430px 59px 432px;
+    width: 298px;
+    height: 54px;
+    background: var(--color-orange-gradient);
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button_feed:hover {
+    background: var(--color-orage-dark);
+    transition: all 0.5s ease-in;
+}
