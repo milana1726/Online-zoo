@@ -1,3 +1,8 @@
+
+/* * {
+
+} */
+
 @font-face {
     font-family: Roboto;
     src: url(/assets/fonts/Roboto-Regular.ttf);
@@ -8,8 +13,10 @@
     --color-green: #4B9200;
     --color-orange: #F9804B;
     --color-orage-dark: #E47209;
+    --color-orange-gradient: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     --color-yellow: #FFEE2E;
     --color-red: #D31414;
+    --color-pink-gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     --color-black-blue: #333B41;
     --color-grey: #767474;
     --color-grey-smoky: #ABABAB;
@@ -18,17 +25,16 @@
 }
 
 html {
-    box-sizing: border-box;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
     font-family: Roboto;
+    box-sizing: border-box;
 }
 
 body {
-    margin: auto;
-    max-width: 1600px;
     position: relative;
-    overflow-x: hidden;
+    margin: auto;
+    /* miwidth: 1600px; */
+    background-color: #000;
 }
 
 a {
@@ -39,21 +45,22 @@ a {
     background: url(../../assets/images/background_Giant-Panda.png);
     background-repeat: no-repeat;
     justify-content: center;
+    background-position: center 0px;
+    background-size: 100%;
 }
 
 .wrapper {
+    position: relative;
     max-width: 1160px;
-    margin: 0 220px 0 220px;
+    margin: 0 auto;
 }
 
 /* -----HEADER----- */
 header {
     margin: 0;
-    padding: 0;
     display: flex;
 	flex-direction: row;
     background-color: #000;
-    max-height: 80px;
 }
 
 .header_logo {
@@ -84,14 +91,15 @@ h1 {
 
 h1:hover {
     color: var(--color-green);
-    transition-duration: 1.5s;
+    transition: all 0.5s ease-in;
     border: 1px solid var(--color-green);
 }
 
 .nav_menu {
+    width: 100%;
     display: flex;
 	flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     margin-left: 88px;
     overflow-y: hidden;
 }
@@ -110,11 +118,11 @@ h1:hover {
 
 .nav_item:hover {
     color: var(--color-green);
-    transition-duration: 1.5s;
+    transition: all 0.5s ease-in;
 }
 
 .designed_by {
-    margin-left: 436px;
+    margin-left: 439px;
     color: #fff;
     font-weight: 500;
     font-size: 16px;
@@ -122,6 +130,10 @@ h1:hover {
 }
 
 /* -----WATCH ONLINE----- */
+.watch_online_block {
+    padding-bottom: 100px;
+}
+
 .circle_block {
     position: relative;
     width: 465px;
@@ -135,22 +147,23 @@ h1:hover {
 
 .circle_block h2 {
     position: absolute;
-    margin-top: 75px;
+    margin-top: 73px;
     margin-left: 73px;
-    width: 500px;
+    width: 500.31px;
     height: 400px;
     font-weight: 700;
-    font-size: 106.5px;
-    line-height: 75%;
+    font-size: 106.75px;
+    line-height: 79.87px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
 }
 
-.circle_block h2 span {
+.circle_block span {
     font-weight: 700;
     font-size: 106.5px;
-    line-height: 75%;
+    line-height: 79.87px;
+    text-align: center;
     color: var(--color-yellow);
     text-transform: uppercase;
 }
@@ -160,9 +173,8 @@ h1:hover {
 	height: 54px;
     margin-top: 69px;
     margin-left: calc(50% - 298px/2 + 332px);
-    margin-bottom: 100px;
 	border: none;
-    background: var(--color-orange);
+    background: var(--color-orange-gradient);
 	border-radius: 25px;
 	font-weight: 500;
 	font-size: 16px;
@@ -175,50 +187,46 @@ h1:hover {
 
 .button_watch:hover {
     background: var(--color-orage-dark);
-    transition-duration: 1.5s;
+    transition: all 0.5s ease-in;
 }
 
 /* -----BACKSTAGE----- */
+
 .backstage_block {
     position: relative;
     background-color: #fff;
     padding-top: 140px;
-    padding-bottom: 180px;
+    padding-bottom: 104px;
     align-items: center;
-}
-
-.backstage_block .wrapper {
-    position: absolute;
-}
-
-.backstage_deco {
-    margin-top: -128px;
-    margin-left: 1396px;
-    width: 293px;
-    height: 605px;
+    max-width: 100%;
+    background-image: url(../../assets/images/flower_foto.png);
+    background-repeat: no-repeat;
+    background-position-y: 24%;
+    background-position-x: 100%;
 }
 
 .backstage_content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: left;
 }
 
 .backstage_image {
     width: 609px;
     height: 403px;
-    margin-right: 86px;
-    margin-left: -1px;;
-    display: block;
 }
 
+.backstage_textblock {
+    max-width: 500px;
+    padding-left: 85px;
+    overflow: hidden;
+}
 .backstage_textblock h2 {
     margin: 0;
     font-weight: 400;
     font-size: 48px;
     line-height: 120%;
-    color: #545454;
+    color: var(--color-black-blue);
 }
 
 .backstage_textblock h3 {
@@ -238,10 +246,168 @@ h1:hover {
     color: var(--color-black-blue);
 }
 .backstage_text2{
-    margin-top: 20px;
+    margin-top: 19px;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
     color: var(--color-black-blue);
 }
 
+/* -----PETS----- */
+.pets_block {
+    background-color: #fff;
+    align-items: center;
+    padding-top: 57px;
+    padding-bottom: 100px;
+    background-image: url('../../assets/images/palm_foto.png'), url('../../assets/images/strelitzia_foto.png');
+    background-position: 0% 100%, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.pets_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_pets {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards_container {
+    display: grid;
+    column-gap: 29px;
+    row-gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.arrow_left {
+    height: 62px;
+    width: 62px;
+    margin-top: 404px;
+    margin-right: 18px;
+    border-radius: 100px;
+    border: none;
+    background: var(--color-orange-gradient);
+    cursor: pointer;
+}
+
+.arrow_right {
+    height: 62px;
+    width: 62px;
+    margin-top: 404px;
+    margin-left: 18px;
+    border-radius: 100px;
+    border: none;
+    background: var(--color-orange-gradient);
+    cursor: pointer;
+}
+
+.pet_card {
+    width: 366px;
+    height: 426px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-orange);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+}
+
+.pet_info {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.pet_image {
+    margin: 0;
+    width: 366px;
+    height: 366px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+    border-style: none;
+    transition: all 0.5s ease-in;
+}
+
+.pet_info_text {
+    margin: 8px 0px 16px 16px;
+    width: 294px;
+}
+
+.pet_info_text h4 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.pet_info_text p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #000;
+}
+
+.banana_bamboo_img {
+    margin: 10px 13px 13px 11px;
+    width: 33px;
+    height: 37px;
+}
+.meat_fish_img {
+    margin: 8px 13px 13px 0px;
+    width: 48px;
+    height: 38px;
+}
+
+.button_choose {
+    margin-top: 79px;
+    width: 298px;
+    height: 54px;
+    border: none;
+    background: var(--color-orange-gradient);
+	border-radius: 25px;
+    font-weight: 500;
+    font-size: 14.5px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+.arrow_left:hover,
+.arrow_right:hover,
+.button_choose:hover {
+    background: var(--color-orage-dark);
+    transition: all 0.5s ease-in;
+}
+
+.pet_card:hover .pet_image {
+    filter: brightness(0.25);
+    transform: scale(1.1);
+}
+
+.pet_card:hover .banana_bamboo_img,
+.pet_card:hover .meat_fish_img {
+    display: none;
+}
+
+.pet_card:hover .pet_info {
+    transform: translate(0, -350%);
+    transition: all 0.5s ease-in;
+}
+
+.pet_card:hover .pet_info_text h4,
+.pet_card:hover .pet_info_text p {
+    color: #FFFFFF;
+}
+
+/* -----PICK AND FEED----- */
