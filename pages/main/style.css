@@ -1,9 +1,3 @@
-@font-face {
-    font-family: Roboto;
-    src: url(/assets/fonts/Roboto-Regular.ttf);
-    font-style: normal;
-}
-
 :root {
     --color-green: #4B9200;
     --color-orange: #F9804B;
@@ -12,17 +6,18 @@
     --color-orange-gradient: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     --color-yellow: #FFEE2E;
     --color-red: #D31414;
-    --color-pink-gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    --color-pink-gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     --color-black-blue: #333B41;
     --color-grey: #767474;
     --color-grey-smoky: #ABABAB;
     --color-light-grey: #F1F3F2;
+    --color-grey-fog:#BDBDBD;
     --color-fosted-glass-white: #FDFDFF;
+
 }
 
 html {
 	scroll-behavior: smooth;
-    font-family: Roboto;
     box-sizing: border-box;
 }
 
@@ -30,6 +25,8 @@ body {
     position: relative;
     margin: auto;
     background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
 }
 
 a {
@@ -66,8 +63,8 @@ header {
 
 .bamboo_icon {
     position: absolute;
-    margin-left: -5px;
-    margin-top: -2px;
+    margin-left: 10px;
+    margin-top: 38px;
     width: 12px;
     height: 21px;
 }
@@ -75,7 +72,8 @@ header {
 h1 {
     position: absolute;
     margin: 14px 0px 14px 0px;
-    padding: 3px 4px 1px 4px;
+    padding: 2px 0px 1px 0px;
+    width: 82px;
     color: #fff;
     font-weight: 400;
     text-align: center;
@@ -407,9 +405,11 @@ h1:hover {
 .pick_feed_block {
     padding-top: 70px;
     padding-bottom: 100px;
+    background: #fff;
     background-image: url(../../assets/images/background_pick-and-feed.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    opacity: 1.1;
 }
 
 .pick_feed_content {
@@ -423,7 +423,7 @@ h1:hover {
 }
 
 .pick_feed_textblock  {
-    margin-left: 42px;
+    margin-left: 40px;
     margin-bottom: 11px;
     text-align: left;
     color: var(--color-black-blue);
@@ -434,6 +434,7 @@ h1:hover {
 
 .pick_feed_textblock h2 {
     margin: 40px auto 31px 251px;
+    font-weight: 400;
     font-size: 48px;
     line-height: 120%;
     text-align: left;
@@ -447,10 +448,9 @@ h1:hover {
 }
 
 .pick_feed_textblock .text_bold {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     margin-bottom: -5px;
-    letter-spacing: 0.0045em;
 }
 
 .pick_feed_textblock .support_link {
@@ -470,15 +470,15 @@ h1:hover {
 
 .pick_feed_work_block h3{
     font-weight: 400;
-    font-size: 36px;
+    font-size: 35px;
     line-height: 130%;
-    margin-left: 477px;
-    margin-bottom: 35px;
+    margin-left: 478px;
+    margin-bottom: 38px;
     color: var(--color-black-blue);
 }
 
 .work_table {
-    padding-left: 199px;
+    padding-left: 198px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -535,7 +535,7 @@ h1:hover {
 }
 
 .button_feed {
-    margin: 62px 430px 59px 432px;
+    margin: 61px 430px 59px 432px;
     width: 298px;
     height: 54px;
     background: var(--color-orange-gradient);
@@ -553,3 +553,148 @@ h1:hover {
     background: var(--color-orage-dark);
     transition: all 0.5s ease-in;
 }
+
+/* -----TESTIMONIALS----- */
+.testimonials_block {
+    background-color: #fff;
+    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 204px;
+    background-image: url(../../assets/images/leav_foto.png);
+    background-repeat: no-repeat;
+    background-position-y: 120.5%;
+    background-position-x: 100%;
+}
+
+.testimonials_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials_content h3 {
+    margin-top: 0px;
+    margin-bottom: 47px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    color: var(--color-black-blue);
+}
+
+.testimonials_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%
+}
+
+.user_card {
+    width: 268px;
+    height: 388px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(var(--color-light-grey), var(--color-light-grey)), var(--color-pink-gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.user_info {
+    padding: 13px 15px 10px 16px;
+    display: flex;
+}
+
+.user_icon {
+    width: 37px;
+    height: 37px;
+}
+
+.user_text {
+    margin-left: 10px;
+}
+
+.user_text h4 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #000;
+}
+.user_text p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: var(--color-grey-fog);
+}
+
+.user_feedback {
+    margin: 0px 10px 19px 16px;
+}
+
+.user_feedback p {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: var(--color-grey);
+
+}
+
+.slider_range {
+    margin: 19px auto 30px auto;
+    width: 599px;
+    height: 8px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(var(--color-light-grey), var(--color-light-grey)), var(--color-pink-gradient);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: ease-in-out .5s;
+}
+
+.slider_range::-webkit-slider-thumb {
+    width: 115.19px;
+    height: 6px;
+    border-radius: 5px;
+    background: var(--color-orange-light);
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.slider_range:focus {
+    outline: none;
+}
+
+.slider_range::-webkit-slider-thumb:hover {
+    background: var(--color-orage-dark);
+}
+
+.slider_range::-webkit-slider-thumb:active {
+    background: var(--color-green);
+}
+
+.button_feedback {
+    margin-right: 861.5px;
+    width: 298px;
+    height: 54px;
+    background: var(--color-orange-gradient);
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button_feedback:hover {
+    background: var(--color-orage-dark);
+    transition: all 0.5s ease-in;
+}
+
+/* -----FOOTER----- */
