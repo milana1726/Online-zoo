@@ -13,6 +13,7 @@
     --color-light-grey: #F1F3F2;
     --color-grey-fog:#BDBDBD;
     --color-fosted-glass-white: #FDFDFF;
+    --color-black-fog: #111115;
 
 }
 
@@ -33,6 +34,27 @@ a {
     text-decoration: none;
 }
 
+button {
+    width: 298px;
+	height: 54px;
+    font-weight: 500;
+	font-size: 15px;
+	line-height: 140%;
+	color: #fff;
+    border: none;
+    text-transform: uppercase;
+	cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-orage-dark);
+    transition: all 0.5s ease-in;
+}
+
+button:active {
+    background: var(--color-green);
+}
+
 .desktop_wrapper {
     background: url(../../assets/images/background_Giant-Panda.png);
     background-repeat: no-repeat;
@@ -43,7 +65,7 @@ a {
 
 .wrapper {
     position: relative;
-    max-width: 1160px;
+    width: 1160px;
     margin: 0 auto;
 }
 
@@ -162,24 +184,10 @@ h1:hover {
 }
 
 .button_watch {
-    width: 298px;
-	height: 54px;
     margin-top: 69px;
     margin-left: calc(50% - 298px/2 + 332px);
-	border: none;
     background: var(--color-orange-gradient);
 	border-radius: 25px;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 140%;
-	color: #fff;
-    text-transform: uppercase;
-	cursor: pointer;
-}
-
-.button_watch:hover {
-    background: var(--color-orage-dark);
-    transition: all 0.5s ease-in;
 }
 
 /* -----BACKSTAGE----- */
@@ -361,24 +369,8 @@ h1:hover {
 
 .button_choose {
     margin-top: 78px;
-    width: 298px;
-    height: 54px;
-    border: none;
     background: var(--color-orange-gradient);
 	border-radius: 25px;
-    font-weight: 500;
-    font-size: 14.5px;
-    line-height: 140%;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-}
-
-.arrow_left:hover,
-.arrow_right:hover,
-.button_choose:hover {
-    background: var(--color-orage-dark);
-    transition: all 0.5s ease-in;
 }
 
 .pet_card:hover .pet_image {
@@ -536,22 +528,8 @@ h1:hover {
 
 .button_feed {
     margin: 61px 430px 59px 432px;
-    width: 298px;
-    height: 54px;
     background: var(--color-orange-gradient);
-    border: none;
     border-radius: 25px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 140%;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.button_feed:hover {
-    background: var(--color-orage-dark);
-    transition: all 0.5s ease-in;
 }
 
 /* -----TESTIMONIALS----- */
@@ -559,7 +537,7 @@ h1:hover {
     background-color: #fff;
     align-items: center;
     padding-top: 140px;
-    padding-bottom: 204px;
+    padding-bottom: 181px;
     background-image: url(../../assets/images/leav_foto.png);
     background-repeat: no-repeat;
     background-position-y: 120.5%;
@@ -646,7 +624,7 @@ h1:hover {
     margin: 19px auto 30px auto;
     width: 599px;
     height: 8px;
-    border: 1px solid transparent;
+    border: 0.5px solid transparent;
     border-radius: 5px;
     background: linear-gradient(var(--color-light-grey), var(--color-light-grey)), var(--color-pink-gradient);
     background-origin: border-box;
@@ -679,22 +657,207 @@ h1:hover {
 
 .button_feedback {
     margin-right: 861.5px;
-    width: 298px;
-    height: 54px;
     background: var(--color-orange-gradient);
-    border: none;
     border-radius: 5px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 140%;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.button_feedback:hover {
-    background: var(--color-orage-dark);
-    transition: all 0.5s ease-in;
 }
 
 /* -----FOOTER----- */
+footer {
+    position: relative;
+    padding-top: 25px;
+    background-color: var(--color-black-fog);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_logo {
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    align-items: center;
+}
+
+.footer_bamboo_icon {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 37px;
+    width: 12px;
+    height: 21px;
+}
+
+.footer_logo p {
+    position: absolute;
+    margin: 14px 0px 14px 0px;
+    padding: 2px 0px 3px 0px;
+    width: 82px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 19.01px;
+    line-height: 22.82px;
+    border: 1px solid #fff;
+}
+
+.footer_logo p:hover {
+    color: var(--color-green);
+    transition: all 0.5s ease-in;
+    border: 1px solid var(--color-green);
+}
+
+
+.form_subscribe {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 365px;
+}
+
+.form_subscribe p {
+    margin: 0 0 14px 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #fff;
+}
+
+.input_block {
+    display: flex;
+    flex-direction: row;
+}
+
+.input_block input {
+    width: 228px;
+    padding-left: 5px;
+    height: 38px;
+    background-color: var(--color-black-fog);
+    border: 0.7px solid var(--color-orange-light);
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-grey-fog);
+    outline: none;
+}
+
+.button_submit {
+    margin-left: 5px;
+    padding: 10px 39px;
+    width: 129px;
+    height: 42px;
+    background: var(--color-light-grey);
+    border: 1px solid var(--color-black-blue);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+    text-transform: none;
+}
+
+.button_submit:hover {
+    background: var(--color-light-grey);
+    transition: all 0.5s ease-in;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_content {
+    margin-top: 37px;
+}
+
+.button_donate {
+    margin-bottom: 30px;
+    background: var(--color-orange-gradient);
+    border-radius: 5px;
+}
+
+.social_list a {
+    display: flex;
+    flex-direction: row;
+    margin-top: -6px;
+}
+
+.hidden_list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social_icon {
+    margin-right: 12px;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+}
+
+.facebook_icon {
+    margin-top: 5px;
+    margin-left: 9px;
+    width: 8px;
+    height: 16px;
+}
+
+.twitter_icon {
+    margin-top: 6px;
+    margin-left: 5px;
+    width: 16px;
+    height: 14px;
+}
+
+.instagram_icon {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.youtube_icon {
+    margin-top: 6px;
+    margin-left: 4px;
+    width: 18px;
+    height: 12.99px;
+}
+
+.social_list p {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+}
+
+.footer_nav {
+    margin-top: 210px;
+    margin-left: -7px;
+}
+.footer_nav .nav_item {
+    margin-left: 0;
+    margin-right: 58px;
+}
+
+.footer_author {
+    margin-top: 180px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.footer_author p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
