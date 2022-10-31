@@ -234,3 +234,248 @@ h1:hover {
     line-height: 140%;
     color: var(--color-black-blue);
 }
+
+/* -----FOOTER----- */
+footer {
+    position: relative;
+    padding-top: 25px;
+    background-color: var(--color-black-fog);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_logo {
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    align-items: center;
+}
+
+.footer_bamboo_icon {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 37px;
+    width: 12px;
+    height: 21px;
+}
+
+.footer_logo p {
+    position: absolute;
+    margin: 14px 0px 14px 0px;
+    padding: 2px 0px 3px 0px;
+    width: 82px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 19.01px;
+    line-height: 120%;
+    border: 1px solid #fff;
+}
+
+.footer_logo p:hover {
+    color: var(--color-grey-fog);
+    transition: all 0.5s ease-in;
+    border: 1px solid var(--color-grey-fog);
+}
+
+.form_subscribe {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 365px;
+}
+
+.form_subscribe p {
+    margin: 0 0 14px 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #fff;
+}
+
+.input_block {
+    display: flex;
+    flex-direction: row;
+}
+
+.input_block input {
+    width: 228px;
+    padding-left: 7px;
+    height: 38px;
+    background-color: var(--color-black-fog);
+    border: 0.7px solid var(--color-orange-light);
+    border-radius: 2px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-grey-fog);
+    outline: none;
+}
+
+.button_submit {
+    margin-left: 5px;
+    padding: 10px 39px;
+    width: 129px;
+    height: 42px;
+    background: var(--color-light-grey);
+    border: 1px solid var(--color-black-blue);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+    text-transform: none;
+}
+
+.button_submit:hover {
+    background: var(--color-light-grey);
+    transition: all 0.5s ease-in;
+}
+
+.input_block input:focus {
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
+    background: var(--color-light-grey);
+}
+
+.input_block input:focus:invalid {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+    background: var(--color-light-grey);
+}
+
+.input_block input:focus + .button_submit {
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
+}
+
+.input_block input:focus:invalid + .button_submit {
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+}
+
+.footer_content {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.footer_social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button_donate {
+    background: var(--color-orange-gradient);
+    border-radius: 5px;
+}
+
+.hidden_list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social_list {
+    margin: 0;
+}
+
+.social_list a {
+    display: flex;
+    flex-direction: row;
+    margin-top: -7px;
+    padding: 0;
+}
+
+.social_list p {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #fff;
+}
+
+.social_icon {
+    margin-right: 12px;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+}
+
+.social_list li:hover .social_icon  {
+    background: var(--color-green);
+}
+
+.social_list li:hover p{
+    color: var(--color-green);
+}
+
+.facebook_icon {
+    margin-top: 5px;
+    margin-left: 9px;
+    width: 8px;
+    height: 16px;
+}
+
+.twitter_icon {
+    margin-top: 6px;
+    margin-left: 5px;
+    width: 16px;
+    height: 14px;
+}
+
+.instagram_icon {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.youtube_icon {
+    margin-top: 6px;
+    margin-left: 4px;
+    width: 18px;
+    height: 12.99px;
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 210px;
+    margin-left: -7px;
+}
+
+.footer_nav .nav_item {
+    margin-left: 0;
+    margin-right: 58px;
+}
+
+.footer_author {
+    margin-top: 180px;
+    font-weight: 100;
+}
+
+.footer_author p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+
+.footer_author a {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    font-size: 16px;
+    line-height: 130%;
+    color: #fff;
+}
+
+.footer_author a:hover {
+    color: var(--color-green);
+    text-decoration: underline;
+}
