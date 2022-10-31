@@ -1,0 +1,142 @@
+:root {
+    --color-green: #4B9200;
+    --color-orange: #F9804B;
+    --color-orange-light: #FE9013;
+    --color-orage-dark: #E47209;
+    --color-orange-gradient: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    --color-yellow: #FFEE2E;
+    --color-red: #D31414;
+    --color-pink-gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    --color-black-blue: #333B41;
+    --color-grey: #767474;
+    --color-grey-smoky: #ABABAB;
+    --color-light-grey: #F1F3F2;
+    --color-grey-fog:#BDBDBD;
+    --color-fosted-glass-white: #FDFDFF;
+    --color-black-fog: #111115;
+}
+
+html {
+	scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: auto;
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    width: 298px;
+	height: 54px;
+    font-weight: 500;
+	font-size: 15px;
+	line-height: 140%;
+	color: #fff;
+    border: none;
+    text-transform: uppercase;
+	cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-orage-dark);
+    transition: all 0.5s ease-in;
+}
+
+button:active {
+    background: var(--color-green);
+}
+
+.desktop_wrapper {
+    justify-content: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+/* -----HEADER----- */
+header {
+    margin: 0;
+    display: flex;
+	flex-direction: row;
+    background-color: #000;
+}
+
+.header_logo {
+    position: relative;
+    padding: 0;
+    align-items: center;
+}
+
+.bamboo_icon {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 38px;
+    width: 12px;
+    height: 21px;
+}
+
+h1 {
+    position: absolute;
+    margin: 14px 0px 14px 0px;
+    padding: 2px 0px 1px 0px;
+    width: 82px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 19.01px;
+    line-height: 120%;
+    border: 1px solid #fff;
+}
+
+h1:hover {
+    color: var(--color-grey-fog);
+    transition: all 0.5s ease-in;
+    border: 1px solid var(--color-grey-fog);
+}
+
+.nav_menu {
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+    align-items: stretch;
+    margin-left: 88px;
+    overflow-y: hidden;
+}
+
+.nav_item {
+    margin: 29px 0px 29px 58px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.item_active {
+    background: var(--color-orange-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav_item:hover {
+    background: var(--color-orange-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.5s ease-in;
+}
+
+.designed_by {
+    margin-left: 439px;
+}
