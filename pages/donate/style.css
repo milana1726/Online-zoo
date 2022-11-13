@@ -299,6 +299,7 @@ h1:hover {
     background: var(--color-grey-light);
     z-index: 1;
 }
+
 .donate_container_slider {
     margin-top: 14px;
     position: relative;
@@ -570,8 +571,7 @@ footer {
 }
 
 .button_submit:hover {
-    background: var(--color-light-grey);
-    transition: all 0.5s ease-in;
+    background: var(--color-grey-smoky);
 }
 
 .input_block input:focus {

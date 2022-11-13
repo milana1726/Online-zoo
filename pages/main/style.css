@@ -759,8 +759,7 @@ footer {
 }
 
 .button_submit:hover {
-    background: var(--color-light-grey);
-    transition: all 0.5s ease-in;
+    background: var(--color-grey-smoky);
 }
 
 .input_block input:focus {
