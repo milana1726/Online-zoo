@@ -173,6 +173,10 @@ h1:hover {
     color: #fff;
 }
 
+h3.donation_title {
+    color: var(--color-orange-light);
+}
+
 .pick_feed_info p {
     margin-top: 10px;
     margin-bottom: 45px;
