@@ -20,6 +20,34 @@
                         <img class="bamboo_icon" src="../../assets/icons/bamboo_icon.png" alt="bamboo_icon">
                     </a>
                 </div>
+                <div id="burger_menu">
+                    <nav id="nav_hidden">
+                        <div class="nav_burger">
+                            <div id="header_logo" class="header_logo">
+                                <a href="../main/index.html">
+                                    <p class="logo_title">PetStory online</p>
+                                    <img class="bamboo_icon_orange" src="../../assets/icons/bamboo_orange.png" alt="bamboo_icon">
+                                </a>
+                                <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                                    <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                                </a>
+                            </div>
+                            <div class="nav_items">
+                                <a class="nav_item item_active" href="../main/index.html">About</a>
+                                <a class="nav_item" href="#">Map</a>
+                                <a class="nav_item" href="#">Zoos</a>
+                                <a class="nav_item" href="../donate/index.html">Donate</a>
+                                <a class="nav_item" href="#">Contact us</a>
+                                <a class="nav_item designed_by" target="_blank" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks">
+                                    Designed by ©
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                        <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                    </a>
+                </div>
                 <nav id="nav_origin">
                     <div id="nav_menu" class="nav_menu">
                         <a class="nav_item" href="../main/index.html">About</a>
@@ -76,17 +104,17 @@
                                     <div class="slider_value_block">
                                         <input type="radio" id="value5000" name="value"
                                             value="5000">
-                                        <label for="value5000">$5000</label>
+                                        <label id="label5000" for="value5000">$5000</label>
                                     </div>
                                     <div class="slider_value_block">
                                         <input type="radio" id="value2000" name="value"
                                             value="2000">
-                                        <label for="value2000">$2000</label>
+                                        <label id="label2000" for="value2000">$2000</label>
                                     </div>
                                     <div class="slider_value_block">
                                         <input type="radio" id="value1000" name="value"
-                                            value="1000" checked>
-                                        <label for="value1000">$1000</label>
+                                            value="1000">
+                                        <label id="label1000" for="value1000">$1000</label>
                                     </div>
                                     <div class="slider_value_block">
                                         <input type="radio" id="value500" name="value"
@@ -96,7 +124,7 @@
                                     <div class="slider_value_block">
                                         <input type="radio" id="value250" name="value"
                                             value="250">
-                                        <label for="value250">$250</label>
+                                        <label for="value250" checked>$250</label>
                                     </div>
                                     <div class="slider_value_block">
                                         <input type="radio" id="value100" name="value"
@@ -209,5 +237,6 @@
             </div>
         </footer>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
