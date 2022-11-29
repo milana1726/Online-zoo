@@ -22,6 +22,7 @@
 html {
 	scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     background-color: #000;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 a {
@@ -152,8 +154,7 @@ h1:hover {
     background: url(../../assets/images/backgroud_panda_bg.png);
     background-repeat: no-repeat;
     justify-content: center;
-    background-position: center 0px;
-    background-size: 100%;
+    background-size: cover;
     height: 386px;
 }
 
@@ -764,7 +765,7 @@ footer {
 
     .backgroud_image {
         background-position: 30% 0%;
-        background-size: 160%;
+        background-size: cover;
         height: 390px;
     }
 
@@ -1001,7 +1002,7 @@ footer {
 
     .backgroud_image {
         background-position: 37% 0%;
-        background-size: 215%;
+        background-size: cover;
         height: 335px;
     }
 
@@ -1348,7 +1349,7 @@ footer {
 
     .backgroud_image {
         background-position: 33% 0%;
-        background-size: 240%;
+        background-size: cover;
         height: 187px;
     }
 

@@ -19,6 +19,7 @@
 html {
 	scroll-behavior: smooth;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     background-color: #000;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 a {
@@ -59,7 +61,7 @@ button:active {
     background-repeat: no-repeat;
     justify-content: center;
     background-position: center 0px;
-    background-size: 125%;
+    background-size: 130% 20%;
 }
 
 .wrapper {
@@ -940,6 +942,11 @@ footer {
 }
 
 @media (max-width: 1000px) {
+    .desktop_wrapper {
+        background-size: 142%;
+        background-color: #fff;
+    }
+
     .wrapper {
         width: 940px;
         margin: 0 30px;
@@ -1216,6 +1223,11 @@ footer {
 }
 
 @media (max-width: 640px) {
+    .desktop_wrapper {
+        background-size: 142%;
+        background-color: #fff;
+    }
+
     .wrapper {
         width: 600px;
         margin: 0 20px;
@@ -1307,7 +1319,7 @@ footer {
         width: 18px;
         height: 10px;
         z-index: 100;
-        left: 600px;
+        left: 280px;
         padding: 4px;
         cursor: pointer;
     }
