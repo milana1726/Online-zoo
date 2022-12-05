@@ -870,7 +870,8 @@ footer {
     /* -----HEADER----- */
 
     header {
-        position: sticky;
+        margin-top: -34px;
+        position: fixed;
         height: 34px;
         z-index: 1;
     }
@@ -931,31 +932,41 @@ footer {
         padding-top: 4rem;
     }
 
-    .nav_burger .header_logo {
+    .logo_container {
+        margin-top: -35px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo_container .header_logo {
         position: relative;
         padding: 0;
         align-items: center;
-        margin-top: -50px;
+        margin-top: 0px;
         margin-left: 0;
     }
 
-    .nav_burger .header_logo .bamboo_icon_orange  {
+    .logo_container .header_logo .bamboo_icon_orange  {
         position: absolute;
-        margin-top: 5px;
+        margin-top: -10px;
         padding-left: 21px;
         width: 4.54px;
         height: 12.56px;
         transform: rotate(-10deg);
     }
 
-    .nav_burger .icon_burger {
+    .logo_container .icon_burger {
         position: sticky;
         width: 18px;
         height: 10px;
-        z-index: 100;
-        left: 600px;
-        padding: 4px;
+        margin-top: -15px;
+        margin-left: 600px;
         cursor: pointer;
+    }
+
+    .icon_burger:hover {
+        box-shadow: 0 0 2px 2px rgba(249, 128, 75, 1);
+        transition: all 0.5s ease-in;
     }
 
     .logo_title {
@@ -974,7 +985,7 @@ footer {
     .nav_items {
         display: flex;
         flex-direction: column;
-        margin-top: 23px;
+        margin-top: 20px;
     }
 
     .nav_item {
@@ -1001,7 +1012,8 @@ footer {
     }
 
     .backgroud_image {
-        background-position: 37% 0%;
+        margin-top: 34px;
+        background-position: 37%;
         background-size: cover;
         height: 335px;
     }
@@ -1217,7 +1229,7 @@ footer {
      /* -----HEADER----- */
 
      header {
-        position: sticky;
+        position: fixed;
         height: 34px;
         z-index: 1;
     }
@@ -1278,31 +1290,41 @@ footer {
         padding-top: 4rem;
     }
 
-    .nav_burger .header_logo {
+    .logo_container {
+        margin-top: -35px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo_container .header_logo {
         position: relative;
         padding: 0;
         align-items: center;
-        margin-top: -50px;
+        margin-top: 0px;
         margin-left: 0;
     }
 
-    .nav_burger .header_logo .bamboo_icon_orange  {
+    .logo_container .header_logo .bamboo_icon_orange  {
         position: absolute;
-        margin-top: 5px;
+        margin-top: -10px;
         padding-left: 21px;
         width: 4.54px;
         height: 12.56px;
         transform: rotate(-10deg);
     }
 
-    .nav_burger .icon_burger {
+    .logo_container .icon_burger {
         position: sticky;
         width: 18px;
         height: 10px;
-        z-index: 100;
-        left: 280px;
-        padding: 4px;
+        margin-top: -15px;
+        margin-left: 290px;
         cursor: pointer;
+    }
+
+    .icon_burger:hover {
+        box-shadow: 0 0 2px 2px rgba(249, 128, 75, 1);
+        transition: all 0.5s ease-in;
     }
 
     .logo_title {
@@ -1321,7 +1343,7 @@ footer {
     .nav_items {
         display: flex;
         flex-direction: column;
-        margin-top: 23px;
+        margin-top: 20px;
     }
 
     .nav_item {
