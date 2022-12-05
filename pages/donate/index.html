@@ -104,42 +104,42 @@
                                 </div>
                                 <div class="donate_container_slider">
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value5000" name="value"
+                                        <input type="radio" id="value5000" class = "dot" name="value"
                                             value="5000">
                                         <label id="label5000" for="value5000">$5000</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value2000" name="value"
+                                        <input type="radio" id="value2000" class = "dot" name="value"
                                             value="2000">
                                         <label id="label2000" for="value2000">$2000</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value1000" name="value"
+                                        <input type="radio" id="value1000" class = "dot" name="value"
                                             value="1000">
                                         <label id="label1000" for="value1000">$1000</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value500" name="value"
+                                        <input type="radio" id="value500" class = "dot" name="value"
                                             value="500">
                                         <label for="value500">$500</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value250" name="value"
+                                        <input type="radio" id="value250" class = "dot" name="value"
                                             value="250">
                                         <label for="value250" checked>$250</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value100" name="value"
+                                        <input type="radio" id="value100" class = "dot" name="value"
                                             value="100">
                                         <label for="value100">$100</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value50" name="value"
+                                        <input type="radio" id="value50" class = "dot" name="value"
                                             value="50">
                                         <label for="value50">$50</label>
                                     </div>
                                     <div class="slider_value_block">
-                                        <input type="radio" id="value25" name="value"
+                                        <input type="radio" id="value25" class = "dot" name="value"
                                             value="25">
                                         <label for="value25">$25</label>
                                     </div>
@@ -147,7 +147,7 @@
                             </div>
                             <div class="donate_container_amount">
                                 <input class="donate_amount"  type="number" id="donate_amount" placeholder="Another amount"
-                                min="1" max="5000" title="The value must be between 1 and 9999">
+                                min="1" max="5000" title="The value must be between 1 and 9999" oninput="matchAmountDots(this);">
                             </div>
                             <div class="donate_container_notes">
                                 <div class="note_item">
