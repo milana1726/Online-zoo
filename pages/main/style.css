@@ -1228,9 +1228,10 @@ footer {
     /* -----HEADER----- */
 
     header {
-        position: sticky;
+        position: fixed;
         height: 34px;
         z-index: 1;
+        margin-bottom: 10px;
     }
 
     .header_logo {
@@ -1883,7 +1884,7 @@ footer {
      /* -----HEADER----- */
 
      header {
-        position: sticky;
+        position: fixed;
         height: 34px;
         z-index: 1;
     }
