@@ -427,7 +427,7 @@ h1:hover {
     background: #fff;
     background-image: url(../../assets/images/background_pick-and-feed.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     opacity: 1.1;
 }
 
@@ -957,7 +957,7 @@ footer {
 
 @media (max-width: 1000px) {
     .desktop_wrapper {
-        background-size: 142%;
+        background-size: 120%;
         background-color: #fff;
     }
 
@@ -1216,7 +1216,7 @@ footer {
 
 @media (max-width: 640px) {
     .desktop_wrapper {
-        background-size: 142%;
+        background-size: 120%;
         background-color: #fff;
     }
 
@@ -1870,7 +1870,8 @@ footer {
 
 @media (max-width: 320px) {
     .desktop_wrapper {
-        background-size: 142%;
+        background-position: center 30px;
+        background-size: 122.5%;
         background-color: #fff;
     }
 
@@ -2027,7 +2028,7 @@ footer {
         padding-bottom: 0px;
         background-image: url(../../assets/images/flower_foto.png);
         background-repeat: no-repeat;
-        background-position-y: 1514%;
+        background-position-y: 374%;
         background-position-x: 117.5%;
         background-size: 23.5%;
     }
