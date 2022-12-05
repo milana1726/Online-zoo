@@ -165,7 +165,7 @@ h1:hover {
     background: #fff;
     background-image: url(../../assets/images/background_pick-and-feed_big.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     opacity: 1.1;
 }
 
