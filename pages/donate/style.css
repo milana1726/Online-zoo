@@ -1012,7 +1012,8 @@ footer {
     }
 
     .backgroud_image {
-        background-position: 37% 0%;
+        margin-top: 34px;
+        background-position: 37%;
         background-size: cover;
         height: 335px;
     }
