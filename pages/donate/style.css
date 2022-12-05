@@ -870,7 +870,8 @@ footer {
     /* -----HEADER----- */
 
     header {
-        position: sticky;
+        margin-top: -34px;
+        position: fixed;
         height: 34px;
         z-index: 1;
     }
@@ -984,7 +985,7 @@ footer {
     .nav_items {
         display: flex;
         flex-direction: column;
-        margin-top: 23px;
+        margin-top: 20px;
     }
 
     .nav_item {
@@ -1227,7 +1228,7 @@ footer {
      /* -----HEADER----- */
 
      header {
-        position: sticky;
+        position: fixed;
         height: 34px;
         z-index: 1;
     }
@@ -1341,7 +1342,7 @@ footer {
     .nav_items {
         display: flex;
         flex-direction: column;
-        margin-top: 23px;
+        margin-top: 20px;
     }
 
     .nav_item {
