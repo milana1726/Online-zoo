@@ -1,6 +1,6 @@
+// BURGER MENU
 const menu = document.querySelector(".nav_burger");
 const menuItems = document.querySelectorAll(".nav_item");
-// const hamburger= document.querySelector(".icon_nav_hidden");
 const menuIcon = document.querySelector(".icon_burger");
 
 function toggleMenu() {
