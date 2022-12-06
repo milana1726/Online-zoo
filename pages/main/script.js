@@ -1,4 +1,5 @@
 // BURGER MENU
+
 const menu = document.querySelector(".nav_burger");
 const menuItems = document.querySelectorAll(".nav_item");
 const menuIcon = document.querySelector(".icon_burger");
@@ -167,17 +168,21 @@ function createFeedbacks(rangeValue) {
 async function createSliderRange(arr) {
     let feedbacks = await getDataFeedbacks();
     arr.forEach(item => sliderContainer.append(createUserCard(feedbacks[item])));
-    slider.max = feedbacks.length;
+    if (window.innerWidth > 1000) {
+        slider.max = feedbacks.length - 3;
+    } else if (window.innerWidth <= 1000 && window.innerWidth > 640){
+        slider.max = feedbacks.length - 2;
+    }
 }
 
 function createUserCard({name, img, location, date, description}) {
     let fragment = document.createDocumentFragment();
 
-    let card = document.createElement('div');
-    card.classList.add('user_card', 'fade');
-    card.addEventListener('click', () =>
+    let cardUser = document.createElement('div');
+    cardUser.classList.add('user_card', 'fade');
+    cardUser.addEventListener('click', () =>
         openModal(name, img, location, date, description));
-    card.innerHTML = `
+        cardUser.innerHTML = `
         <div class="user_info">
             <img class="user_icon" src="${img}" alt="user_icon">
             <div class="user_text">
@@ -189,7 +194,7 @@ function createUserCard({name, img, location, date, description}) {
             <p>${description}</p>
         </div>`
 
-    fragment.append(card);
+    fragment.append(cardUser);
 
     return fragment;
 }
