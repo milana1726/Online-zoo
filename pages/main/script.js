@@ -38,6 +38,12 @@ async function getDataPets(){
         }
 }
 
+const pets_container = document.querySelector('.cards_container');
+const btn_left = document.querySelector('.arrow_left');
+const btn_right = document.querySelector('.arrow_right');
+
+let petsArr = [];
+
 window.addEventListener('DOMContentLoaded', () => {
     createCards();
     createFeedbacks(rangeValue);
@@ -46,12 +52,6 @@ window.addEventListener('resize', () => {
     createCards();
     createFeedbacks(rangeValue);
 });
-
-const pets_container = document.querySelector('.cards_container');
-const btn_left = document.querySelector('.arrow_left');
-const btn_right = document.querySelector('.arrow_right');
-
-let petsArr = [];
 
 function createPetCard({name, img, location, foodImg, icon}) {
     let fragment = document.createDocumentFragment();
@@ -83,16 +83,14 @@ function createCards() {
         pets_container.removeChild(pets_container.firstChild);
     }
     createSlider(petsArr);
+    transformSlide(petsArr);
 };
 
 async function createSlider(arr, btnInfo) {
     let pets = await getDataPets();
     arr.forEach(item => {
-        if (btnInfo === 'next') {
-            pets_container.append(createPetCard(pets[item]));
-        } else {
-            pets_container.prepend(createPetCard(pets[item]));
-        }
+        btnInfo === 'next' ? pets_container.append(createPetCard(pets[item])) : pets_container.prepend(createPetCard(pets[item]));
+        //pets_container.append(createPetCard(pets[item]));
     });
 }
 
@@ -104,21 +102,44 @@ btn_left.addEventListener('click', () => {
 });
 
 function showCards(btnInfo) {
-    const randomArr = randomArray(petsArr);
+    const randomArr = randomArrayFunc(petsArr);
     createSlider(randomArr, btnInfo);
+    transformSlide(petsArr, btnInfo);
     setTimeout(() => {
         removeCards(petsArr, btnInfo);
-    }, 500);
+    }, 1000);
     petsArr = randomArr;
 };
 
-function removeCards(arr, btnInfo) {
-    for (let i = 0; i < arr.length; i++) {
-        btnInfo === 'next' ? pets_container.removeChild(pets_container.firstChild) : pets_container.removeChild(pets_container.lastChild);
+function transformSlide(arr, btnInfo) {
+    let wrapperWidth;
+    switch(arr.length) {
+        case 4: wrapperWidth = 640; break;
+        case 6: wrapperWidth = 1600; break;
+    }
+    if (btnInfo === 'next') {
+        pets_container.style.justifyContent = 'flex-start';
+        pets_container.style.transform = `translateX(-${wrapperWidth}px)`;
+        pets_container.style.transition = '1s ease-in-out';
+    } else if(btnInfo === 'prev'){
+        pets_container.style.justifyContent = 'flex-end';
+        pets_container.style.transform = `translateX(${wrapperWidth}px)`;
+        pets_container.style.transition = '1s ease-in-out';
     }
 }
 
-const randomArray = (arr) => {
+function removeCards(arr, btnInfo) {
+    pets_container.style.transform = 'translateX(0)';
+    pets_container.style.transition = '0s';
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr.length);
+        btnInfo === 'next' ? pets_container.removeChild(pets_container.firstChild) : pets_container.removeChild(pets_container.lastChild);
+        // pets_container.removeChild(pets_container.firstChild);
+        //pets_container.removeChild(pets_container.lastChild);
+    }
+}
+
+function randomArrayFunc(arr) {
     let currentIndex = arr.length, temporaryValue, randomIndex;
 
     while (0 !== currentIndex) {

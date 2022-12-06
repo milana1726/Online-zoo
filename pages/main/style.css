@@ -278,6 +278,10 @@ h1:hover {
     align-items: center;
 }
 
+.pets_content_slider {
+    overflow: hidden;
+}
+
 .slider_pets {
     display: flex;
     flex-direction: row;
