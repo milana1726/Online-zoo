@@ -86,11 +86,10 @@ function createCards() {
     transformSlide(petsArr);
 };
 
-async function createSlider(arr, btnInfo) {
+async function createSlider(arr) {
     let pets = await getDataPets();
     arr.forEach(item => {
-        btnInfo === 'next' ? pets_container.append(createPetCard(pets[item])) : pets_container.prepend(createPetCard(pets[item]));
-        //pets_container.append(createPetCard(pets[item]));
+        pets_container.append(createPetCard(pets[item]))
     });
 }
 
@@ -103,10 +102,10 @@ btn_left.addEventListener('click', () => {
 
 function showCards(btnInfo) {
     const randomArr = randomArrayFunc(petsArr);
-    createSlider(randomArr, btnInfo);
+    createSlider(randomArr);
     transformSlide(petsArr, btnInfo);
     setTimeout(() => {
-        removeCards(petsArr, btnInfo);
+        removeCards(petsArr);
     }, 1000);
     petsArr = randomArr;
 };
@@ -120,11 +119,11 @@ function transformSlide(arr, btnInfo) {
     if (btnInfo === 'next') {
         pets_container.style.justifyContent = 'flex-start';
         pets_container.style.transform = `translateX(-${wrapperWidth}px)`;
-        pets_container.style.transition = '1s ease-in-out';
+        pets_container.style.transition = '0.5s ease-in-out';
     } else if(btnInfo === 'prev'){
         pets_container.style.justifyContent = 'flex-end';
         pets_container.style.transform = `translateX(${wrapperWidth}px)`;
-        pets_container.style.transition = '1s ease-in-out';
+        pets_container.style.transition = '0.5s ease-in-out';
     }
 }
 
@@ -132,10 +131,7 @@ function removeCards(arr, btnInfo) {
     pets_container.style.transform = 'translateX(0)';
     pets_container.style.transition = '0s';
     for (let i = 0; i < arr.length; i++) {
-        console.log(arr.length);
-        btnInfo === 'next' ? pets_container.removeChild(pets_container.firstChild) : pets_container.removeChild(pets_container.lastChild);
-        // pets_container.removeChild(pets_container.firstChild);
-        //pets_container.removeChild(pets_container.lastChild);
+        pets_container.removeChild(pets_container.firstChild);
     }
 }
 
