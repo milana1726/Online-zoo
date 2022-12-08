@@ -38,19 +38,41 @@ async function getDataPets(){
         }
 }
 
+let petsArr = [];
 const pets_container = document.querySelector('.cards_container');
 const btn_left = document.querySelector('.arrow_left');
 const btn_right = document.querySelector('.arrow_right');
 
-let petsArr = [];
-
 window.addEventListener('DOMContentLoaded', () => {
     createCards();
-    createFeedbacks(rangeValue);
+
+    fetch('./feedbacks.json')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        let feedbacks = data.map((item, index) => ({...item, id: index}));
+        return feedbacks;
+    })
+    .then(data => {
+        createUserCard(data);
+    });
 });
+
 window.addEventListener('resize', () => {
     createCards();
-    createFeedbacks(rangeValue);
+
+    fetch('./feedbacks.json')
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        let feedbacks = data.map((item, index) => ({...item, id: index}));
+        return feedbacks;
+    })
+    .then(data => {
+        createUserCard(data);
+    });
 });
 
 function createPetCard({name, img, location, foodImg, icon}) {
@@ -152,84 +174,68 @@ function randomArrayFunc(arr) {
 }
 
 // TESTMONIALS SLIDER
-let feedbackArr = [];
 const sliderContainer = document.querySelector('.testimonials_container');
 const slider = document.getElementById("slider_range");
 
-async function getDataFeedbacks(){
-    let response = await fetch('../../pages/main/feedbacks.json');
-    if (response.ok) {
-        let data = await response.json();
-        return data;
-    } else {
-        alert("Error HTTP: " + response.status);
-    }
+const screenWidth = window.screen.width;
+
+if (screenWidth < 1000) {
+  const testimonials = document.querySelectorAll(".testimonials-card");
+
+  if (testimonials) {
+    testimonials.forEach((item) => {
+      item.addEventListener("click", (event) => showPopup(event));
+    });
+  }
 }
 
-function createFeedbacks(rangeValue) {
-    let i = rangeValue;
-    if (i != 0) {
-        i--;
-    };
-    if (window.innerWidth > 1000) {
-        feedbackArr = [0 + i, 1 + i, 2 + i, 3 + i];
-    } else {
-        feedbackArr = [0 + i, 1 + i, 2 + i];
-    };
-    while (sliderContainer.firstChild) {
-        sliderContainer.removeChild(sliderContainer.firstChild);
-    }
-    createSliderRange(feedbackArr);
-};
-
-async function createSliderRange(arr) {
-    let feedbacks = await getDataFeedbacks();
-    arr.forEach(item => sliderContainer.append(createUserCard(feedbacks[item])));
-    if (window.innerWidth > 1000) {
-        slider.max = feedbacks.length - 3;
-    } else if (window.innerWidth <= 1000 && window.innerWidth > 640){
-        slider.max = feedbacks.length - 2;
-    }
-}
-
-function createUserCard({name, img, location, date, description}) {
-    let fragment = document.createDocumentFragment();
-
-    let cardUser = document.createElement('div');
-    cardUser.classList.add('user_card', 'fade');
-    cardUser.addEventListener('click', () =>
-        openModal(name, img, location, date, description));
-        cardUser.innerHTML = `
-        <div class="user_info">
-            <img class="user_icon" src="${img}" alt="user_icon">
-            <div class="user_text">
-                <h4>${name}</h4>
-                <p>${location}&ensp;•&ensp;${date}</p>
-            </div>
-        </div>
-        <div class="user_feedback">
-            <p>${description}</p>
-        </div>`
-
-    fragment.append(cardUser);
-
-    return fragment;
-}
-
-function openModal(name, img, location, date, description) {
+function createUserCard(data) {
     let output = '';
-    output += `
+    let index = 0;
+    for (let item of data) {
+        output += `
+        <div class="user_card fade" id="${index}">
             <div class="user_info">
-                <img class="user_icon" src="${img}" alt="user_icon">
+                <img class="user_icon" src="${item.img}" alt="user_icon">
                 <div class="user_text">
-                    <h4>${name}</h4>
-                    <p>${location}&ensp;•&ensp;${date}</p>
+                    <h4>${item.name}</h4>
+                    <p>${item.location}&ensp;•&ensp;${item.date}</p>
                 </div>
             </div>
             <div class="user_feedback">
-                <p>${description}</p>
+                <p>${item.description}</p>
+            </div>
+        </div>`;
+        index++;
+    }
+
+    sliderContainer.innerHTML = output;
+
+    const userCard = document.querySelectorAll('.user_card');
+    if (window.innerWidth < 1000) {
+        userCard.forEach((card, id = card.id) => {
+            card.onclick = () => {
+                openModal(data, id);
+            }
+        });
+    }
+};
+
+function openModal(data, id) {
+    let output = '';
+    output += `
+            <div class="user_info">
+                <img class="user_icon" src="${data[id].img}" alt="user_icon">
+                <div class="user_text">
+                    <h4>${data[id].name}</h4>
+                    <p>${data[id].location}&ensp;•&ensp;${data[id].date}</p>
+                </div>
+            </div>
+            <div class="user_feedback">
+                <p>${data[id].description}</p>
             </div>
             <div class="modal_close" type="button">+<div>`;
+
         document.getElementById("modal_container").classList.add("visible"),
         document.documentElement.style.overflowY = "hidden",
         document.querySelector(".user_modal_card").innerHTML = output;
@@ -239,7 +245,6 @@ function openModal(name, img, location, date, description) {
                 document.documentElement.style.overflowY = "visible";
         });
 
-
         document.getElementById("modal_container").addEventListener("click", function (e) {
             const click = e.composedPath().includes(document.getElementById("more_content"));
             if (!click) {
@@ -247,11 +252,20 @@ function openModal(name, img, location, date, description) {
                 document.documentElement.style.overflowY = "visible";
             }
         });
-};
-
-let rangeValue = 0;
+}
 
 slider.addEventListener('input', () => {
-    rangeValue = slider.value;
-    createFeedbacks(rangeValue);
+    rangeValue();
 });
+
+function rangeValue() {
+    const cardUser = document.querySelector('.user_card');
+
+    let rangeValue = Number(slider.value);
+    let cardWidth = cardUser.offsetWidth;
+    let gap = 30;
+
+    cardWidth = Number.parseInt(cardWidth, 10);
+    let size = cardWidth + gap;
+    sliderContainer.setAttribute("style", `transform: translate(-${rangeValue * size}px);`);
+}
