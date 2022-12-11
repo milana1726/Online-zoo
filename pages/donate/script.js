@@ -24,7 +24,13 @@ menuItems.forEach(
   function(menuItem) {
     menuItem.addEventListener("click", toggleMenu);
   }
-)
+);
+
+menu.addEventListener('click', () => {
+  if (menu.classList.contains("show_menu")) {
+      menu.classList.remove("show_menu");
+  }
+});
 
 //AMOUNT
 let yellow_dots = document.querySelectorAll('input.dot');

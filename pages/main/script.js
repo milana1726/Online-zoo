@@ -21,6 +21,12 @@ function toggleMenu() {
   }
 }
 
+menu.addEventListener('click', () => {
+    if (menu.classList.contains("show_menu")) {
+        menu.classList.remove("show_menu");
+    }
+});
+
 menuItems.forEach(
   function(menuItem) {
     menuItem.addEventListener("click", toggleMenu);
@@ -162,14 +168,14 @@ function randomArrayFunc(arr) {
 
     while (0 !== currentIndex) {
 
-        randomIndex = Math.floor(Math.random() * currentIndex);
+        randomIndex = Math.floor(Math.random() * (currentIndex));
         currentIndex -= 1;
 
         temporaryValue = arr[currentIndex];
         arr[currentIndex] = arr[randomIndex];
         arr[randomIndex] = temporaryValue;
     }
-
+    console.log(arr);
     return arr;
 }
 
