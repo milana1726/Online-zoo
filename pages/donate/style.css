@@ -1006,7 +1006,7 @@ footer {
         top: 0;
         left: 0;
         width: 640px;
-        height: 265px;
+        height: 100%px;
         background: #fff;
     }
 
@@ -1363,7 +1363,7 @@ footer {
         top: 0;
         left: 0;
         width: 640px;
-        height: 265px;
+        height: 100%;
         background: #fff;
     }
 

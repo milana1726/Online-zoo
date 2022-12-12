@@ -21,6 +21,12 @@ function toggleMenu() {
   }
 }
 
+menu.addEventListener('click', () => {
+    if (menu.classList.contains("show_menu")) {
+        menu.classList.remove("show_menu");
+    }
+});
+
 menuItems.forEach(
   function(menuItem) {
     menuItem.addEventListener("click", toggleMenu);
@@ -105,72 +111,80 @@ function createCards() {
         pets_container.removeChild(pets_container.firstChild);
     }
     createSlider(petsArr);
-    transformSlide(petsArr);
 };
 
-async function createSlider(arr) {
+async function createSlider(randomArr) {
     let pets = await getDataPets();
-    arr.forEach(item => {
-        pets_container.append(createPetCard(pets[item]))
+    randomArr.forEach(item => {
+            pets_container.append(createPetCard(pets[item]));
     });
 }
 
+let disabledClick = false;
+
 btn_right.addEventListener('click', () => {
+    if (disabledClick  === true) {
+        return false;
+      }
+    disabledClick = true;
     showCards('next');
 });
+
 btn_left.addEventListener('click', () => {
+    if (disabledClick  === true) {
+        return false;
+      }
+    disabledClick = true;
     showCards('prev');
 });
 
 function showCards(btnInfo) {
     const randomArr = randomArrayFunc(petsArr);
+    setTimeout(() => {
+        removeCards(petsArr, btnInfo);
+        disabledClick = false;
+    }, 1000);
     createSlider(randomArr);
     transformSlide(petsArr, btnInfo);
-    setTimeout(() => {
-        removeCards(petsArr);
-    }, 1000);
     petsArr = randomArr;
+
 };
 
-function transformSlide(arr, btnInfo) {
+function transformSlide(petsArr, btnInfo) {
     let wrapperWidth;
-    switch(arr.length) {
+    switch(petsArr.length) {
         case 4: wrapperWidth = 640; break;
         case 6: wrapperWidth = 1600; break;
     }
     if (btnInfo === 'next') {
         pets_container.style.justifyContent = 'flex-start';
         pets_container.style.transform = `translateX(-${wrapperWidth}px)`;
-        pets_container.style.transition = '0.5s ease-in-out';
-    } else if(btnInfo === 'prev'){
+        pets_container.style.transition = '1s ease-in-out';
+    } else if (btnInfo === 'prev'){
         pets_container.style.justifyContent = 'flex-end';
         pets_container.style.transform = `translateX(${wrapperWidth}px)`;
-        pets_container.style.transition = '0.5s ease-in-out';
+        pets_container.style.transition = '1s ease-in-out';
     }
 }
 
-function removeCards(arr, btnInfo) {
+function removeCards(PetsArr, btnInfo) {
     pets_container.style.transform = 'translateX(0)';
     pets_container.style.transition = '0s';
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < PetsArr.length; i++) {
         pets_container.removeChild(pets_container.firstChild);
     }
 }
 
-function randomArrayFunc(arr) {
-    let currentIndex = arr.length, temporaryValue, randomIndex;
-
-    while (0 !== currentIndex) {
-
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        temporaryValue = arr[currentIndex];
-        arr[currentIndex] = arr[randomIndex];
-        arr[randomIndex] = temporaryValue;
+function randomArrayFunc(PetsArr) {
+    let randomArr = [];
+    for(let item of PetsArr) {
+        let x;
+        while(x === undefined || randomArr.includes(x)) {
+            x = Math.floor(Math.random()*7);
+        }
+        randomArr.push(x);
     }
-
-    return arr;
+    return randomArr;
 }
 
 // TESTMONIALS SLIDER
