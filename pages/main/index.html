@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Online-zoo. Desktop Petstory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/group-of-animals.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="desktop_wrapper">
+        <header>
+            <div class="wrapper">
+                <div id="header_logo" class="header_logo">
+                    <a href="../main/index.html">
+                        <h1>PetStory online</h1>
+                        <img class="bamboo_icon" src="../../assets/icons/bamboo_icon.png" alt="bamboo_icon">
+                    </a>
+                </div>
+                <div id="burger_menu">
+                    <nav id="nav_hidden">
+                        <div class="nav_burger">
+                            <div class = "logo_container">
+                                <div id="header_logo" class="header_logo">
+                                    <a href="../main/index.html">
+                                        <p class="logo_title">PetStory online</p>
+                                        <img class="bamboo_icon_orange" src="../../assets/icons/bamboo_orange.png" alt="bamboo_icon">
+                                    </a>
+                                </div>
+                                <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                                    <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                                </a>
+                            </div>
+                            <div class="nav_items">
+                                <a class="nav_item item_active" href="../main/index.html">About</a>
+                                <a class="nav_item" href="#">Map</a>
+                                <a class="nav_item" href="#">Zoos</a>
+                                <a class="nav_item" href="../donate/index.html">Donate</a>
+                                <a class="nav_item" href="#">Contact us</a>
+                                <a class="nav_item designed_by" target="_blank" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks">
+                                    Designed by ©
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                        <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                    </a>
+                </div>
+                <nav id="nav_origin">
+                    <div id="nav_menu" class="nav_menu">
+                        <a class="nav_item item_active" href="../main/index.html">About</a>
+                        <a class="nav_item" href="#">Map</a>
+                        <a class="nav_item" href="#">Zoos</a>
+                        <a class="nav_item" href="../donate/index.html">Donate</a>
+                        <a class="nav_item" href="#">Contact us</a>
+                        <a class="nav_item designed_by" target="_blank" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks">
+                            Designed by ©
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="watch_online_block">
+                <div class="wrapper">
+                    <div class="watch_online_content">
+                        <div class="circle_block">
+                            <h2>Watch your <span>favorite</span> animal online</h2>
+                        </div>
+                        <button type="button" onclick="" class="button_watch">watсh online</button>
+                    </div>
+                </div>
+            </div>
+            <div class="backstage_block">
+                <div class="wrapper">
+                    <div class="backstage_content">
+                        <div class="backstage_image"></div>
+                        <div class="backstage_textblock">
+                            <h2>The Backstage of the Wilderness World.</h2>
+                            <p class = "backstage_text1">The site was founded on the basis of a volunteer movement to protect and care for animals.</p>
+                            <h3>How it works</h3>
+                            <p class = "backstage_text2">The main goal is to help the animals, as well as the nature reserves and zoos where they are kept. We are currently working on video projects targeting pandas in China, eagles on an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total of more than 1,500 mammals and reptiles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pets_block">
+                <div class="wrapper">
+                    <div class="pets_content">
+                        <div class="pets_content_slider">
+                            <div class="slider_pets">
+                                <button type="button" onclick="" class="arrow_left btn_timeout">
+                                    <img class="arrow" src="../../assets/icons/arrow-l_icon.svg" alt="arrow_left">
+                                </button>
+                                <div class="cards_container"></div>
+                                <button type="button" onclick="" class="arrow_right btn_timeout">
+                                    <img class="arrow" src="../../assets/icons/arrow-r_icon.svg" alt="arrow_right">
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" onclick="" class="button_choose">Choose your favorite</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pick_feed_block">
+                <div class="wrapper">
+                    <div class="pick_feed_content">
+                        <div class="pick_feed_textblock">
+                            <h2>Pick and feed a friend</h2>
+                            <p class="subtitle">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
+                            <p class="text_bold">During a time when the COVID-19 epidemic is touching all of our lives, we’re proud and glad that people around the world find joy in PetStory.</p>
+                            <p class="text_link">Even though the zoo has reopened, we need you now more than ever to help us deal with these problems. Please consider a gift to our <a class="support_link" href="../donate/index.html">Emergency Support Fund</a> .</p>
+                        </div>
+                        <div class="pick_feed_work_block">
+                            <h3>How it works</h3>
+                            <div class="work_table">
+                                <div class="table_item">
+                                    <div class ="table_image">
+                                        <img class="pay_image" src="../../assets/images/pay.png" alt="pay_image">
+                                    </div>
+                                    <p>Pay with card</p>
+                                </div>
+                                <div class="arrow_big">
+                                    <img src="../../assets/images/big-arrow.png" alt="arrow_big">
+                                </div>
+                                <div class="arrow_green">
+                                    <img src="../../assets/images/arrow_green.png" alt="arrow_green">
+                                </div>
+                                <div class="table_item">
+                                    <div class ="table_image">
+                                        <img class="zoo_image" src="../../assets/images/zoo.png" alt="zoo_image">
+                                    </div>
+                                    <p>Payment goes to the zoo</p>
+                                </div>
+                                <div class="arrow_big">
+                                    <img src="../../assets/images/big-arrow.png" alt="arrow_big">
+                                </div>
+                                <div class="arrow_green_next">
+                                    <img src="../../assets/images/arrow_green.png" alt="arrow_green">
+                                </div>
+                                <div class="table_item">
+                                    <div class ="table_image">
+                                        <img class="monkey_image" src="../../assets/images/monkey.png" alt="monkey_image">
+                                    </div>
+                                    <p>Your favourite animal gets delicious dish</p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="document.location='../donate/index.html'" class="button_feed">Feed a friend now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials_block">
+                <div class="wrapper">
+                    <div class="testimonials_content">
+                        <h3>Testimonials</h3>
+                        <div class="testimonials">
+                            <div class="testimonials_container">
+                                </div>
+                                <div id="modal_container">
+                                    <div id="more_container">
+                                        <div class="user_modal_card">
+                                        </div>
+                                    </div>
+                                </div>
+                            <input class="slider_range" type="range" min="1" max="8" value="0"  id="slider_range">
+                        </div>
+                        <button type="button" onclick="" class="button_feedback">Leave feedback</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="footer_header">
+                    <div class="footer_logo">
+                        <a href="../main/index.html">
+                            <p>PetStory online</p>
+                            <img class="footer_bamboo_icon" src="../../assets/icons/bamboo_icon.svg" alt="bamboo_icon">
+                        </a>
+                    </div>
+                    <form class="form_subscribe">
+                        <p>Subscribe to our news</p>
+                        <div class="input_block">
+                            <input type="email" id="email_subscribe" name="email_subscribe" placeholder="Enter your email" required>\
+                            <button class="button_submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer_content">
+                    <div class="footer_social">
+                        <button type="button" class="button_donate" onclick="document.location='../donate/index.html'" >Donate for volunteers</button>
+                        <ul class="social_list hidden_list">
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="facebook_icon" src="../../assets/icons/facebook_icon.png" alt = "facebook">
+                                    </div>
+                                    <p>Facebook</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="twitter_icon" src="../../assets/icons/twitter_icon.png" alt = "twitter">
+                                    </div>
+                                    <p>Twitter</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="instagram_icon" src="../../assets/icons/instagram_icon.png" alt = "instagram">
+                                    </div>
+                                    <p>Instagram</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="youtube_icon" src="../../assets/icons/youtube_icon.png" alt = "yuotube">
+                                    </div>
+                                    <p>YouTube</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer_nav hidden_list">
+                            <li><a class="nav_item item_active" href="../main/index.html">About</a></li>
+                            <li><a class="nav_item" href="#">Map</a></li>
+                            <li><a class="nav_item" href="#">Zoos</a></li>
+                            <li><a class="nav_item" href="#">Contact us</a></li>
+                    </ul>
+                    <div class="footer_author">
+                        <a href="https://github.com/milana1726" target="_blank">
+                            <p class="author_text">Designed by Alisa Samborskaya</p>
+                        </a>
+                        <a href="https://rollingscopes.com/" target="_blank">
+                            <p class="author_text">©RSSchool & ©Yem Digital 2021</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
