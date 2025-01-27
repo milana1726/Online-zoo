@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Online-zoo. Donate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/group-of-animals.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="desktop_wrapper">
+        <header>
+            <div class="wrapper">
+                <div id="header_logo" class="header_logo">
+                    <a href="../main/index.html">
+                        <h1>PetStory online</h1>
+                        <img class="bamboo_icon" src="../../assets/icons/bamboo_icon.png" alt="bamboo_icon">
+                    </a>
+                </div>
+                <div id="burger_menu">
+                    <nav id="nav_hidden">
+                        <div class="nav_burger">
+                            <div class = "logo_container">
+                                <div id="header_logo" class="header_logo">
+                                    <a href="../main/index.html">
+                                        <p class="logo_title">PetStory online</p>
+                                        <img class="bamboo_icon_orange" src="../../assets/icons/bamboo_orange.png" alt="bamboo_icon">
+                                    </a>
+                                </div>
+                                <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                                    <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                                </a>
+                            </div>
+                            <div class="nav_items">
+                                <a class="nav_item item_active" href="../main/index.html">About</a>
+                                <a class="nav_item" href="#">Map</a>
+                                <a class="nav_item" href="#">Zoos</a>
+                                <a class="nav_item" href="../donate/index.html">Donate</a>
+                                <a class="nav_item" href="#">Contact us</a>
+                                <a class="nav_item designed_by" target="_blank" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks">
+                                    Designed by ©
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    <a href="#" id="icon_nav_hidden" onclick="toggleMenu()">
+                        <img class="icon_burger" src="../../assets/icons/burger_menu.png" alt="icon_burger">
+                    </a>
+                </div>
+                <nav id="nav_origin">
+                    <div id="nav_menu" class="nav_menu">
+                        <a class="nav_item" href="../main/index.html">About</a>
+                        <a class="nav_item" href="#">Map</a>
+                        <a class="nav_item" href="#">Zoos</a>
+                        <a class="nav_item item_active" href="../donate/index.html">Donate</a>
+                        <a class="nav_item" href="#">Contact us</a>
+                        <a class="nav_item designed_by" target="_blank" href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks">
+                            Designed by ©
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="backgroud_image">
+                <div class="wrapper"></div>
+            </div>
+            <div class="pick_feed_block">
+                <div class="wrapper">
+                    <div class="pick_feed_info">
+                        <h3>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
+                        <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational programs and public and private events cancelled
+                            or postponed for additional months. We need you now more than ever to help ensure that we overcome these challenges.
+                            We have been actively raising funds in the community, and we are grateful for the generosity.
+                            But much more support is still needed, and we need your help! Please consider a gift today – no matter what size – to help us sustain our mission.
+                        </p>
+                        <h3 class="donation_title">Donation Information</h3>
+                    </div>
+                    <div class="pick_feed_content">
+                        <div class="pick_feed_textblock">
+                            <h2>Pick and feed a friend</h2>
+                            <p class="subtitle">We know the animals bring you joy, and in these extraordinary times, we’re glad.</p>
+                        </div>
+                        <div class="pick_feed_donate">
+                            <div class="donate_diet">
+                                <div class="donate_diet_day">
+                                    <p class="diet_day_number">4</p>
+                                    <p class="diet_day_text">Panda diet for the day.</p>
+                                </div>
+                                <div class="pick_feed_x">
+                                    <img class="x_icon" src="../../assets/icons/x_icon.svg" alt="x_icon">
+                                </div>
+                                <div class="pick_feed_image">
+                                    <img class="panda_image" src="../../assets/images/animals-widget.png" alt="panda_image">
+                                </div>
+                            </div>
+                            <div class="donate_container">
+                                <p class="donate_container_title">Amount</p>
+                                <div class="donate_container_background">
+                                    <div class="donate_container_line"></div>
+                                </div>
+                                <div class="donate_container_slider">
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value5000" class = "dot" name="value"
+                                            value="5000">
+                                        <label id="label5000" for="value5000">$5000</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value2000" class = "dot" name="value"
+                                            value="2000">
+                                        <label id="label2000" for="value2000">$2000</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value1000" class = "dot" name="value"
+                                            value="1000">
+                                        <label id="label1000" for="value1000">$1000</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value500" class = "dot" name="value"
+                                            value="500">
+                                        <label for="value500">$500</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value250" class = "dot" name="value"
+                                            value="250">
+                                        <label for="value250" checked>$250</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value100" class = "dot" name="value"
+                                            value="100">
+                                        <label for="value100">$100</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value50" class = "dot" name="value"
+                                            value="50">
+                                        <label for="value50">$50</label>
+                                    </div>
+                                    <div class="slider_value_block">
+                                        <input type="radio" id="value25" class = "dot" name="value"
+                                            value="25">
+                                        <label for="value25">$25</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="donate_container_amount">
+                                <input class="donate_amount"  type="number" id="donate_amount" placeholder="Another amount"
+                                min="1" max="5000" title="The value must be between 1 and 9999" oninput="matchAmountDots(this);">
+                            </div>
+                            <div class="donate_container_notes">
+                                <div class="note_item">
+                                    <input type="radio" id="item_monthly" name="note">
+                                    <label for="item_monthly">Monthly</label>
+                                </div>
+                                <div class="note_item">
+                                    <input type="radio" id="item_once" name="note" checked>
+                                    <label for="item_once">Once</label>
+                                </div>
+                            </div>
+                           <button type="button" onclick="" class="button_feed">Feed a friend now</button>
+                           <p class="hint_share_text">Share with your friends on social networks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="footer_header">
+                    <div class="footer_logo">
+                        <a href="../main/index.html">
+                            <p>PetStory online</p>
+                            <img class="footer_bamboo_icon" src="../../assets/icons/bamboo_icon.svg" alt="bamboo_icon">
+                        </a>
+                    </div>
+                    <form class="form_subscribe">
+                        <p>Subscribe to our news</p>
+                        <div class="input_block">
+                            <input type="email" id="email_subscribe" name="email_subscribe" placeholder="Enter your email" required>\
+                            <button class="button_submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer_content">
+                    <div class="footer_social">
+                        <button type="button" class="button_donate" onclick="document.location='../donate/index.html'" >Donate for volunteers</button>
+                        <ul class="social_list hidden_list">
+                            <li>
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="facebook_icon" src="../../assets/icons/facebook_icon.png" alt = "facebook">
+                                    </div>
+                                    <p>Facebook</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="twitter_icon" src="../../assets/icons/twitter_icon.png" alt = "twitter">
+                                    </div>
+                                    <p>Twitter</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="instagram_icon" src="../../assets/icons/instagram_icon.png" alt = "instagram">
+                                    </div>
+                                    <p>Instagram</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com" target="_blank">
+                                    <div class="social_icon">
+                                        <img class="youtube_icon" src="../../assets/icons/youtube_icon.png" alt = "yuotube">
+                                    </div>
+                                    <p>YouTube</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer_nav hidden_list">
+                            <li><a class="nav_item" href="../main/index.html">About</a></li>
+                            <li><a class="nav_item" href="#">Map</a></li>
+                            <li><a class="nav_item" href="#">Zoos</a></li>
+                            <li><a class="nav_item" href="#">Contact us</a></li>
+                    </ul>
+                    <div class="footer_author">
+                        <a href="https://github.com/milana1726" target="_blank">
+                            <p class="author_text">Designed by Alisa Samborskaya</p>
+                        </a>
+                        <a href="https://rollingscopes.com/" target="_blank">
+                            <p class="author_text">©RSSchool & ©Yem Digital 2021</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
